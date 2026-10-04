@@ -39,3 +39,7 @@ MedSeek and Egypt Law RAG descriptions will use only the facts supplied: the for
 ## User-supplied portrait addition
 
 Use the photo the user supplied as the actual profile portrait (not a generated substitute). Preserve the original upload, create a compressed WebP copy at `public/images/esraa-portrait.webp`, and reference that portable static asset from the editable profile data. Place it in a restrained portrait frame beside the hero copy on desktop and below it on mobile. Keep the full source image intact; use CSS `object-fit: cover` for the responsive frame and provide descriptive alt text.
+
+## GitHub Pages deployment direction
+
+The user selected a public GitHub Pages site while keeping the source repository private if account eligibility permits, and explicitly instructed us to stop rather than change repository visibility if it does not. Build the Vite site to the repository's `docs/` directory and publish from `main` + `/docs`, with relative asset URLs so `/Portfolio/` works without breaking root deployments. Do not use a user-authored Actions workflow; follow the branch-source publishing route. The public page includes the user-supplied portrait, which the user authorized for the portfolio.

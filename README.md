@@ -1,34 +1,8 @@
-# Esraa — AI Engineering Portfolio
 
-A static, mobile-friendly React + TypeScript portfolio. The site does not need a server or database.
+## GitHub Pages
 
-## Edit the content
+This portfolio is prepared to publish a **public website** from the `main` branch's `/docs` folder at `https://basicesraa.github.io/Portfolio/`. The repository itself remains private; GitHub must allow Pages publishing from this private repository under the account's plan. If it does not, do not change repository visibility without a separate decision.
 
-Project titles, summaries, tools, GitHub repository URLs, profile details, and contact destinations live in **`src/data/portfolio.ts`**. Update that one file to maintain the content. Leave a repository URL as `null` while it is unknown; add a WhatsApp phone number as country code and digits only (no `+`, spaces, or punctuation). Contact actions become active automatically after a valid destination is supplied.
+The site is built before publishing and uses relative asset paths for the `/Portfolio/` project URL. To rebuild the static Pages files after content changes, run `pnpm run pages:build`, then commit the updated `docs/` output together with the source changes and push `main`. The GitHub Pages branch source is `main` + `/docs` (no repository-wide public visibility change is needed when eligible).
 
-The descriptions currently identify only the project information provided so far. Replace each “Add …” note with confirmed details and tools when available—do not leave claims that you cannot verify.
-
-## Run locally
-
-Requires Node.js 22 or later and pnpm 11.25.0.
-
-```sh
-pnpm install
-pnpm dev
-```
-
-Create the production site with:
-
-```sh
-pnpm run build
-```
-
-Vite writes the deployable static files to `dist/`.
-
-## Deploy to Vercel
-
-Import this repository into Vercel and keep the root directory at the project root. `vercel.json` selects Vite, `pnpm run build`, and `dist` as the output directory. No environment variables are required.
-
-## Replace the profile photo
-
-The current portrait is `public/images/esraa-portrait.webp`. To change it, replace that asset and update `photoSrc` and `photoAlt` under `profile` in `src/data/portfolio.ts`.
+GitHub documents that Pages sites are publicly available even when their source repository is private, if the account or organization plan allows it. Private-only Pages access requires GitHub Enterprise Cloud. References: [Pages visibility](https://docs.github.com/en/pages/getting-started-with-github-pages/changing-the-visibility-of-your-github-pages-site), [branch publishing](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site), [Pages REST API](https://docs.github.com/rest/pages/pages), and [Vite static deployment](https://vite.dev/guide/static-deploy).

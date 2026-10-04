@@ -34,3 +34,7 @@ The configured tools do not expose native project todo-item creation, so this fi
 ## 5. Supplied portrait
 
 - [x] Add the user-supplied photo to the portfolio hero, preserve the original upload, provide responsive presentation and meaningful alternative text, and use the actual photo rather than an AI-generated likeness.
+
+## 6. GitHub Pages deployment
+
+- [ ] Publish the website publicly from the private repository only if GitHub permits it on the account's plan; if not, stop without changing repository visibility. Do not make the source repository public unless separately authorized.
