@@ -3,15 +3,21 @@ import { ProjectCard } from "./components/ProjectCard";
 import { ContactLink } from "./components/ContactLink";
 
 function ArrowMark({ diagonal = false }: { diagonal?: boolean }) {
-  return <span className={diagonal ? "arrow-mark arrow-mark--diagonal" : "arrow-mark"} aria-hidden="true">{diagonal ? "↗" : "→"}</span>;
+  return (
+    <span
+      className={diagonal ? "arrow-mark arrow-mark--diagonal" : "arrow-mark"}
+      aria-hidden="true"
+    >
+      {diagonal ? "↗" : "→"}
+    </span>
+  );
 }
 
 function SiteHeader() {
   return (
     <header className="site-header">
-      <a className="wordmark" href="#top" aria-label="Esraa — back to top">
-        <span className="wordmark__symbol" aria-hidden="true">e<span>/</span></span>
-        <span>Esraa<span className="wordmark__period">.</span></span>
+      <a className="site-name" href="#top" aria-label={`${portfolio.profile.name} — back to top`}>
+        {portfolio.profile.name}
       </a>
       <nav className="site-nav" aria-label="Main navigation">
         <a href="#work"><span>01</span> Work</a>
@@ -26,7 +32,7 @@ function Hero() {
   return (
     <section className="hero" id="top" aria-labelledby="hero-title">
       <div className="hero__copy">
-        <p className="eyebrow"><span className="status-dot" /> AI ENGINEERING · TANTA, EGYPT</p>
+        <p className="eyebrow"><span className="status-dot" /> AI ENGINEERING STUDENT</p>
         <h1 id="hero-title">Building my way<br />into <em>GenAI.</em></h1>
         <p className="hero__intro">{portfolio.profile.introduction}</p>
         <a className="text-link hero__link" href="#work">See what I’m building <ArrowMark /></a>
@@ -41,7 +47,10 @@ function Hero() {
             height="960"
             fetchPriority="high"
           />
-          <figcaption className="portrait-meta"><span>ESRAA / AI ENGINEERING</span><span>’27</span></figcaption>
+          <figcaption className="portrait-meta">
+            <span>{portfolio.profile.name} / {portfolio.profile.role}</span>
+            <span>{portfolio.profile.graduation}</span>
+          </figcaption>
         </figure>
         <div className="portrait-focus">
           <span className="portrait-focus__label">CURRENTLY EXPLORING</span>
@@ -62,12 +71,12 @@ function SectionLabel({ number, children }: { number: string; children: string }
 function About() {
   return (
     <section className="about-section" id="about" aria-labelledby="about-heading">
-      <SectionLabel number="02" >A LITTLE CONTEXT</SectionLabel>
+      <SectionLabel number="02">A LITTLE CONTEXT</SectionLabel>
       <div className="about-grid">
         <h2 id="about-heading">A student who<br />likes to <em>build.</em></h2>
         <div className="about-copy">
           <p>{portfolio.profile.direction}</p>
-          <p>I’m studying AI Engineering at {portfolio.profile.university}, in {portfolio.profile.location}. I expect to graduate in {portfolio.profile.graduation}.</p>
+          <p>I’m studying AI Engineering at {portfolio.profile.university}. I expect to graduate in {portfolio.profile.graduation}.</p>
           <div className="study-note">
             <span className="study-note__rule" aria-hidden="true" />
             <span>Currently learning, building, and figuring out what works.</span>
@@ -90,9 +99,23 @@ function Work() {
           <SectionLabel number="01">SELECTED WORK</SectionLabel>
           <h2 className="section-heading" id="work-heading">Things I’ve <em>made.</em></h2>
         </div>
-        <p className="work-heading-note">Small projects, honest notes.<br />More detail is still being filled in.</p>
+        <p className="work-heading-note">Scroll sideways to explore all projects <span aria-hidden="true">→</span></p>
       </div>
-      <div className="project-list">
+      <div
+        className="project-list"
+        role="list"
+        aria-label="Project case studies. Use the left and right arrow keys to scroll."
+        tabIndex={0}
+        onKeyDown={(event) => {
+          if (event.key === "ArrowRight") {
+            event.currentTarget.scrollBy({ left: 340, behavior: "smooth" });
+            event.preventDefault();
+          } else if (event.key === "ArrowLeft") {
+            event.currentTarget.scrollBy({ left: -340, behavior: "smooth" });
+            event.preventDefault();
+          }
+        }}
+      >
         {portfolio.projects.map((project) => <ProjectCard key={project.id} project={project} />)}
       </div>
     </section>
@@ -123,7 +146,7 @@ function Contact() {
 function Footer() {
   return (
     <footer className="site-footer">
-      <span><span className="footer-mark">e/</span> Esraa · AI Engineering student</span>
+      <span>{portfolio.profile.name} · {portfolio.profile.role}</span>
       <span>Made while learning. © {new Date().getFullYear()}</span>
       <a href="#top">Back to top <ArrowMark diagonal /></a>
     </footer>

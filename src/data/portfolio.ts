@@ -8,6 +8,8 @@ export type Project = {
   howItWorks: string;
   tools: string[];
   repoUrl: string | null;
+  imageSrc?: string | null;
+  imageAlt?: string;
   featured?: boolean;
 };
 
@@ -18,7 +20,6 @@ export const portfolio = {
     photoSrc: `${import.meta.env.BASE_URL}images/esraa-portrait.webp`,
     photoAlt: "Esraa smiling outdoors in front of a modern building, wearing a light green hijab and dark jacket.",
     university: "Tanta University",
-    location: "Tanta, Egypt",
     graduation: "2027",
     introduction:
       "I’m Esraa, an AI Engineering student at Tanta University. I’m moving toward Generative AI by building with LLM apps, RAG systems, and agentic AI. Still learning, still making things.",

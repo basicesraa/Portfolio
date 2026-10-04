@@ -38,3 +38,12 @@ The configured tools do not expose native project todo-item creation, so this fi
 ## 6. GitHub Pages deployment
 
 - [ ] Publish the website publicly from the private repository only if GitHub permits it on the account's plan; if not, stop without changing repository visibility. Do not make the source repository public unless separately authorized.
+
+## 7. Latest user refinements
+
+- [x] “the over all colors to be on the darker side of the pallet”
+- [x] “the pic to be squareeeeeeeeeeeeeeee and i want to add it by my own tell me how and where to put it”
+- [x] “dont make a logo”
+- [x] “make the projects scrollable from left to right” and keep “the option to add a pic to the project”
+- [x] “dont add location”
+- [x] “tell me exactly where to edit the text”

@@ -2,9 +2,19 @@ import type { Project } from "../data/portfolio";
 
 export function ProjectCard({ project }: { project: Project }) {
   const cardClass = project.featured ? "project-card project-card--featured" : "project-card";
+  const projectImageAlt = project.imageAlt?.trim() || `${project.title} project preview`;
 
   return (
-    <article className={cardClass} aria-labelledby={`${project.id}-title`}>
+    <article role="listitem" className={cardClass} aria-labelledby={`${project.id}-title`}>
+      {project.imageSrc && (
+        <figure className="project-card__media">
+          <img
+            src={project.imageSrc}
+            alt={projectImageAlt}
+            loading="lazy"
+          />
+        </figure>
+      )}
       <div className="project-card__aside">
         <span className="project-card__number">{project.number}</span>
         {project.featured && <span className="featured-tag">FEATURED</span>}
