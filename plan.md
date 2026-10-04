@@ -6,9 +6,9 @@ A concise, responsive personal portfolio for Esraa, an AI Engineering student at
 
 ## Current approved design system
 
-- **Design movement:** Dark editorial developer field-notes: research-notebook hierarchy on a deep slate canvas, not a SaaS landing page.
+- **Design movement:** Dark editorial developer field-notes: research-notebook hierarchy on a deep blue-green canvas, not a SaaS landing page.
 - **Core principles:** Evidence before claims; short, readable writing; quiet visual hierarchy; practical controls that are easy to use on touch screens.
-- **Color philosophy:** Set the page and hero background exactly to #494D5F. Use #A0D2EB more visibly for section marks, links, borders, and image accents; use #E5EAF5 for readable text. Keep #D0BDF4 and #8458B3 secondary. Avoid alternate slate panels, large light backgrounds, and gradients.
+- **Color philosophy:** The page background is #213843. The hero panel is #468D8B. Highlight “GenAI.” in #FEAF76. Keep #A0D2EB visible in section marks, links, borders, and image accents; use #E5EAF5 for readable text. Keep #D0BDF4 and #8458B3 secondary. Avoid gradients and unrequested alternate page backgrounds.
 - **Layout paradigm:** Asymmetric single-page editorial composition with a compact text-only header, portrait-led hero, horizontal left-to-right scrolling project rail, and a short background/contact sequence beneath it. The project rail supports touch/trackpad scrolling and left/right keyboard scrolling.
 - **Signature elements:** Fine notebook rules and section indices; a square portrait frame; horizontally snap-aligned case-study cards with optional project-image slots. Do not add a logo, monogram, or custom favicon.
 - **Interaction philosophy:** Straightforward anchor navigation, visible keyboard focus, descriptive external links, and visible horizontal-scroll affordance. Images are optional and no core project information is hidden behind interaction.
@@ -17,11 +17,11 @@ A concise, responsive personal portfolio for Esraa, an AI Engineering student at
 - **Brand essence:** A growing AI Engineering portfolio that lets readers see the work and learning direction clearly; **curious, grounded, direct**.
 - **Brand voice:** Short, first-person, plain-spoken lines. Examples: “I’m building my way into GenAI.” “Still learning, still making things.”
 - **Wordmark & logo:** No logo or custom wordmark. Use Esraa's name as plain text in navigation only.
-- **Signature brand color:** #494D5F, the dark slate canvas.
+- **Signature brand color:** #213843, the deep blue-green canvas.
 
 ## Implementation approach
 
-Use the existing static Vite + React + TypeScript site, suitable for Vercel or static hosting and not dependent on a server or database. Keep editable profile, project, image, tool, repository, and contact data in `src/data/portfolio.ts`; render repeated cards and links from that source. Make project images optional by adding `imageSrc` and `imageAlt` only when an image exists. Use one responsive stylesheet for dark colors, square portrait crop, horizontal project scrolling, keyboard access, and mobile breakpoints. Remove visible logo and favicon treatments. Preserve the supplied photo at `public/images/esraa-portrait.webp`; document how the user can replace it. Do not fabricate project details, tools, results, contact links, or credentials.
+Use the existing static Vite + React + TypeScript site, suitable for Vercel or static hosting and not dependent on a server or database. Keep editable profile, project, image, tool, repository, and contact data in `src/data/portfolio.ts`; render repeated cards and links from that source. Make project images optional by adding `imageSrc` and `imageAlt` only when an image exists. Use one responsive stylesheet for the requested dark colors, square portrait crop, horizontal project scrolling, keyboard access, and mobile breakpoints. Remove visible logo and favicon treatments. Preserve the supplied photo at `public/images/esraa-portrait.webp`; document how the user can replace it. Do not fabricate project details, tools, results, contact links, or credentials.
 
 ## Project structure
 

@@ -53,3 +53,9 @@ The configured tools do not expose native project todo-item creation, so this fi
 - [x] “the background make it #494D5F”
 - [x] “add more of #A0D2EB”
 - [x] The displayed photo itself must render at a 1:1 width-to-height ratio, separate from its caption.
+
+## 9. Latest preview color edits (request wpe_4eb0cd1b9ead44ab17fb86e7)
+
+- [x] Set the page-root (`#root`) background color to `#213843`.
+- [x] Set the hero section (`#top`) background color to `#468D8B`.
+- [x] Set the `#hero-title > em` text color to `#FEAF76`.
