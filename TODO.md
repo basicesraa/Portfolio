@@ -30,3 +30,7 @@ The configured tools do not expose native project todo-item creation, so this fi
 
 - [x] Keep the website easy to edit later and suitable for hosting on Vercel.
 - [x] Do not invent projects, clients, metrics, testimonials, or achievements. If information is missing, leave a clear placeholder or ask me.
+
+## 5. Supplied portrait
+
+- [x] Add the user-supplied photo to the portfolio hero, preserve the original upload, provide responsive presentation and meaningful alternative text, and use the actual photo rather than an AI-generated likeness.

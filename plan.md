@@ -35,3 +35,7 @@ Use a static Vite + React + TypeScript site, suitable for Vercel’s standard Vi
 ## Content rules
 
 MedSeek and Egypt Law RAG descriptions will use only the facts supplied: the former is an infant-health assistant using RAG; the latter is an Arabic legal assistant. Because no implementation specifics or tool lists were supplied, those fields will openly state that details/tools need to be added. Budgetly and AG News Intelligence Pipeline will retain their supplied titles but use editable content placeholders until their summaries and tool lists are provided. MedSeek receives the featured visual treatment. Its repository and the Egypt Law RAG repository use the supplied links; unknown GitHub and personal contact URLs remain blank/placeholder entries, never fabricated destinations.
+
+## User-supplied portrait addition
+
+Use the photo the user supplied as the actual profile portrait (not a generated substitute). Preserve the original upload, create a compressed WebP copy at `public/images/esraa-portrait.webp`, and reference that portable static asset from the editable profile data. Place it in a restrained portrait frame beside the hero copy on desktop and below it on mobile. Keep the full source image intact; use CSS `object-fit: cover` for the responsive frame and provide descriptive alt text.

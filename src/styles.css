@@ -112,7 +112,7 @@ a:hover .arrow-mark--diagonal { transform: translate(2px, -2px); }
   background: var(--blue);
 }
 .hero__copy { max-width: 590px; padding-bottom: 1.1rem; }
-.eyebrow, .hero-note__topline, .hero-note__foot, .hero__index, .section-label,
+.eyebrow, .portrait-meta, .portrait-focus__label, .hero__index, .section-label,
 .focus-chips__label, .project-card__number, .featured-tag, .case-study dt {
   font-family: var(--mono);
   text-transform: uppercase;
@@ -130,15 +130,16 @@ a:hover .arrow-mark--diagonal { transform: translate(2px, -2px); }
 .hero h1 em, .about-grid h2 em, .section-heading em, .contact-section h2 em { color: var(--blue); font-family: var(--serif); font-weight: 400; }
 .hero__intro { max-width: 460px; margin: 1.65rem 0 1.5rem; color: rgba(229, 234, 245, 0.82); font-size: 1rem; line-height: 1.8; }
 .text-link { display: inline-flex; align-items: center; gap: 0.4rem; color: var(--paper); text-decoration: none; font-size: 0.85rem; font-weight: 600; transition: color 140ms ease; }
-.hero-note { align-self: center; padding: 1.25rem 1.4rem 1rem; border: 1px solid rgba(229, 234, 245, 0.24); background: rgba(229, 234, 245, 0.035); }
-.hero-note__topline, .hero-note__foot { display: flex; justify-content: space-between; gap: 0.5rem; color: rgba(229, 234, 245, 0.58); font-size: 0.56rem; }
-.hero-note__title { margin: 2.05rem 0 1.25rem; font-size: 1.85rem; line-height: 1.1; letter-spacing: -0.045em; }
-.hero-note__title em { color: var(--lilac); font-family: var(--serif); font-weight: 400; }
-.focus-list { padding: 0; margin: 0 0 1.35rem; list-style: none; }
-.focus-list li { display: grid; grid-template-columns: 30px 1fr 18px; align-items: center; gap: 0.4rem; padding: 0.75rem 0; border-top: 1px solid rgba(229, 234, 245, 0.18); font-size: 0.83rem; }
-.focus-list li span { color: var(--blue); font: 0.65rem var(--mono); }
-.focus-list li .arrow-mark { color: var(--lilac); }
-.hero-note__foot { padding-top: 0.8rem; border-top: 1px solid rgba(229, 234, 245, 0.18); }
+.portrait-stack { align-self: center; justify-self: end; width: min(100%, 340px); }
+.portrait-frame { margin: 0; padding: 0.55rem; border: 1px solid rgba(229, 234, 245, 0.28); background: rgba(229, 234, 245, 0.05); }
+.portrait-image { display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: center 40%; background: var(--blue); }
+.portrait-meta { display: flex; justify-content: space-between; gap: 0.5rem; padding: 0.75rem 0.2rem 0.1rem; color: rgba(229, 234, 245, 0.72); font-size: 0.55rem; }
+.portrait-meta span:last-child { color: var(--blue); }
+.portrait-focus { margin-top: 1rem; padding-top: 0.85rem; border-top: 1px solid rgba(229, 234, 245, 0.22); }
+.portrait-focus__label { color: rgba(229, 234, 245, 0.58); font-size: 0.55rem; }
+.portrait-focus__list { display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; padding: 0; margin: 0.65rem 0 0; list-style: none; }
+.portrait-focus__list li { color: var(--paper); font-size: 0.74rem; }
+.portrait-focus__list li::before { content: "·"; margin-right: 0.35rem; color: var(--blue); }
 .hero__index { position: absolute; right: 1.2rem; bottom: 1rem; display: flex; gap: 1.2rem; color: rgba(229, 234, 245, 0.4); font-size: 0.52rem; }
 
 .work-section { padding: clamp(5.25rem, 10vw, 8rem) 0 clamp(4.7rem, 9vw, 7rem); }
@@ -221,7 +222,7 @@ a.contact-link:hover { padding-inline: 0.9rem; background: rgba(160, 210, 235, 0
   .site-nav a > span:first-child { display: none; }
   .hero { grid-template-columns: 1fr; gap: 2.25rem; min-height: 0; padding: 3rem 2rem 2.4rem; }
   .hero__copy { padding-bottom: 0; }
-  .hero-note { width: min(100%, 390px); }
+  .portrait-stack { justify-self: start; width: min(100%, 390px); }
   .hero__index { right: 1rem; bottom: 0.5rem; }
   .work-heading-row { align-items: flex-start; flex-direction: column; gap: 0.8rem; }
   .work-heading-note { text-align: left; }
@@ -244,7 +245,7 @@ a.contact-link:hover { padding-inline: 0.9rem; background: rgba(160, 210, 235, 0
   .hero { margin-top: 18px; padding: 2.5rem 1.4rem 2rem; }
   .hero h1 { font-size: clamp(3.15rem, 15vw, 4.2rem); }
   .hero__intro { font-size: 0.9rem; }
-  .hero-note { padding-inline: 1rem; }
+  .portrait-stack { width: 100%; }
   .hero__index { font-size: 0.45rem; }
   .work-section { padding-top: 4.6rem; }
   .project-card { padding-top: 1.6rem; padding-bottom: 1.8rem; }

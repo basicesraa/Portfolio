@@ -31,15 +31,24 @@ function Hero() {
         <p className="hero__intro">{portfolio.profile.introduction}</p>
         <a className="text-link hero__link" href="#work">See what I’m building <ArrowMark /></a>
       </div>
-      <aside className="hero-note" aria-label="Current areas of focus">
-        <div className="hero-note__topline"><span>FIELD NOTES</span><span>NO. 01 / 03</span></div>
-        <p className="hero-note__title">What I’m<br /><em>leaning into</em></p>
-        <ol className="focus-list">
-          {portfolio.focus.map((item, index) => (
-            <li key={item}><span>0{index + 1}</span>{item}<ArrowMark diagonal /></li>
-          ))}
-        </ol>
-        <div className="hero-note__foot"><span>TANTA UNIVERSITY</span><span>CLASS OF ’27</span></div>
+      <aside className="portrait-stack" aria-label="Portrait and current areas of focus">
+        <figure className="portrait-frame">
+          <img
+            className="portrait-image"
+            src={portfolio.profile.photoSrc}
+            alt={portfolio.profile.photoAlt}
+            width="960"
+            height="960"
+            fetchPriority="high"
+          />
+          <figcaption className="portrait-meta"><span>ESRAA / AI ENGINEERING</span><span>’27</span></figcaption>
+        </figure>
+        <div className="portrait-focus">
+          <span className="portrait-focus__label">CURRENTLY EXPLORING</span>
+          <ul className="portrait-focus__list">
+            {portfolio.focus.map((item) => <li key={item}>{item}</li>)}
+          </ul>
+        </div>
       </aside>
       <div className="hero__index" aria-hidden="true"><span>PORTFOLIO</span><span>2026 — 2027</span></div>
     </section>

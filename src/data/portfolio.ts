@@ -15,6 +15,8 @@ export const portfolio = {
   profile: {
     name: "Esraa",
     role: "AI Engineering student",
+    photoSrc: "/images/esraa-portrait.webp",
+    photoAlt: "Esraa smiling outdoors in front of a modern building, wearing a light green hijab and dark jacket.",
     university: "Tanta University",
     location: "Tanta, Egypt",
     graduation: "2027",
