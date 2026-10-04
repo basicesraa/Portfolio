@@ -22,7 +22,7 @@ export const portfolio = {
     university: "Tanta University",
     graduation: "2027",
     introduction:
-      "I’m Esraa, an AI Engineering student at Tanta University. I’m moving toward Generative AI by building with LLM apps, RAG systems, and agentic AI. Still learning, still making things.",
+      "There's something special about starting with an idea you don't quite know how to bring to life, then slowly figuring it out, one problem at a time",
     direction:
       "I want to make AI systems that are useful, understandable, and grounded in the right context.",
   },
