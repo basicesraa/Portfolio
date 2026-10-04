@@ -8,7 +8,7 @@ A concise, responsive personal portfolio for Esraa, an AI Engineering student at
 
 - **Design movement:** Dark editorial developer field-notes: research-notebook hierarchy on a deep slate canvas, not a SaaS landing page.
 - **Core principles:** Evidence before claims; short, readable writing; quiet visual hierarchy; practical controls that are easy to use on touch screens.
-- **Color philosophy:** Use #494D5F as the dominant page background, with darker derived slate surfaces for cards and the hero. Use #E5EAF5 for readable text. Keep #A0D2EB and #D0BDF4 as restrained highlight colors and #8458B3 as a small accent. Avoid large light panels, multiple competing backgrounds, and gradients.
+- **Color philosophy:** Set the page and hero background exactly to #494D5F. Use #A0D2EB more visibly for section marks, links, borders, and image accents; use #E5EAF5 for readable text. Keep #D0BDF4 and #8458B3 secondary. Avoid alternate slate panels, large light backgrounds, and gradients.
 - **Layout paradigm:** Asymmetric single-page editorial composition with a compact text-only header, portrait-led hero, horizontal left-to-right scrolling project rail, and a short background/contact sequence beneath it. The project rail supports touch/trackpad scrolling and left/right keyboard scrolling.
 - **Signature elements:** Fine notebook rules and section indices; a square portrait frame; horizontally snap-aligned case-study cards with optional project-image slots. Do not add a logo, monogram, or custom favicon.
 - **Interaction philosophy:** Straightforward anchor navigation, visible keyboard focus, descriptive external links, and visible horizontal-scroll affordance. Images are optional and no core project information is hidden behind interaction.

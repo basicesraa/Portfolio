@@ -39,19 +39,19 @@ function Hero() {
       </div>
       <aside className="portrait-stack" aria-label="Portrait and current areas of focus">
         <figure className="portrait-frame">
-          <img
-            className="portrait-image"
-            src={portfolio.profile.photoSrc}
-            alt={portfolio.profile.photoAlt}
-            width="960"
-            height="960"
-            fetchPriority="high"
-          />
-          <figcaption className="portrait-meta">
-            <span>{portfolio.profile.name} / {portfolio.profile.role}</span>
-            <span>{portfolio.profile.graduation}</span>
-          </figcaption>
+        <img
+          className="portrait-image"
+          src={portfolio.profile.photoSrc}
+          alt={portfolio.profile.photoAlt}
+          width="960"
+          height="960"
+          fetchPriority="high"
+        />
         </figure>
+        <div className="portrait-meta">
+          <span>{portfolio.profile.name} / {portfolio.profile.role}</span>
+          <span>{portfolio.profile.graduation}</span>
+        </div>
         <div className="portrait-focus">
           <span className="portrait-focus__label">CURRENTLY EXPLORING</span>
           <ul className="portrait-focus__list">

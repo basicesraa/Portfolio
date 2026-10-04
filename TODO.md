@@ -47,3 +47,9 @@ The configured tools do not expose native project todo-item creation, so this fi
 - [x] “make the projects scrollable from left to right” and keep “the option to add a pic to the project”
 - [x] “dont add location”
 - [x] “tell me exactly where to edit the text”
+
+## 8. Exact palette and square-image clarification
+
+- [x] “the background make it #494D5F”
+- [x] “add more of #A0D2EB”
+- [x] The displayed photo itself must render at a 1:1 width-to-height ratio, separate from its caption.
