@@ -1,47 +1,43 @@
-# Esraa Portfolio — Implementation Plan
+# Esraa Ebeid Portfolio — Implementation Plan
 
 ## Product direction
 
-A concise, responsive personal portfolio for Esraa, an AI Engineering student at Tanta University (graduating 2027). It foregrounds project work and learning direction without presenting her as a senior engineer. Absent contact links and undocumented project specifics remain clearly marked placeholders. Do not display a location.
+A concise, responsive personal portfolio for Esraa Ebeid, an AI Engineering student at Tanta University graduating in 2027. Its hierarchy introduces her by name, places the existing photo beside her short story, shows what she has built, explains her interests, and invites project and freelance conversations. Keep the supplied facts and text; do not add location, medical sources, metrics, or unsupported project claims.
 
 ## Current approved design system
 
-- **Design movement:** Dark editorial developer field-notes: research-notebook hierarchy on a deep blue-green canvas, not a SaaS landing page.
-- **Core principles:** Evidence before claims; short, readable writing; quiet visual hierarchy; practical controls that are easy to use on touch screens.
-- **Color philosophy:** The page background is #213843. The hero panel is #468D8B. Highlight “GenAI.” in #FEAF76. Keep #A0D2EB visible in section marks, links, borders, and image accents; use #E5EAF5 for readable text. Keep #D0BDF4 and #8458B3 secondary. Avoid gradients and unrequested alternate page backgrounds.
-- **Layout paradigm:** Asymmetric single-page editorial composition with a compact text-only header, portrait-led hero, horizontal left-to-right scrolling project rail, and a short background/contact sequence beneath it. The project rail supports touch/trackpad scrolling and left/right keyboard scrolling.
-- **Signature elements:** Fine notebook rules and section indices; a square portrait frame; horizontally snap-aligned case-study cards with optional project-image slots. Do not add a logo, monogram, or custom favicon.
-- **Interaction philosophy:** Straightforward anchor navigation, visible keyboard focus, descriptive external links, and visible horizontal-scroll affordance. Images are optional and no core project information is hidden behind interaction.
-- **Animation:** No decorative or large-background animation. Use only short color/underline and card-hover transitions; honor reduced-motion preferences.
-- **Typography system:** DM Sans for body and interface text, Georgia for a few editorial headings, and DM Mono for labels, indices, and metadata. Keep body copy short and comfortably sized.
-- **Brand essence:** A growing AI Engineering portfolio that lets readers see the work and learning direction clearly; **curious, grounded, direct**.
-- **Brand voice:** Short, first-person, plain-spoken lines. Examples: “I’m building my way into GenAI.” “Still learning, still making things.”
-- **Wordmark & logo:** No logo or custom wordmark. Use Esraa's name as plain text in navigation only.
+- **Design movement:** Dark editorial developer field-notes: a calm deep blue-green canvas with a personal, type-led hero.
+- **Core principles:** Lead with the person, follow with the engineering context and story; show projects as evidence; keep copy personal and factual; make the page comfortable on touch screens.
+- **Color philosophy:** Keep the page background #213843 and the hero panel #468D8B. Use the existing #FEAF76 title accent, #A0D2EB section and interface accents, #E5EAF5 text, with #D0BDF4 and #8458B3 as restrained supporting colors.
+- **Layout paradigm:** Preserve the editorial single-page layout, name-first hero with photo beside the copy, horizontal left-to-right project rail, short About section, three personal interest cards, and contact links. Keep the existing top navigation with the short name “Esraa.”
+- **Signature elements:** The first-screen full-name identity, square photo frame, scrollable project case studies, and three explanatory interest cards. No logo or custom favicon.
+- **Interaction philosophy:** Keep simple anchor navigation, working external links, visible keyboard focus and horizontally scrollable project cards.
+- **Animation:** No decorative background animation. Keep only brief interaction transitions and respect reduced-motion preferences.
+- **Typography system:** Use only DM Sans and Lora from Google Fonts. DM Sans carries body, UI and small labels; Lora carries editorial section headings, project titles and the GenAI phrase. Preserve readable size and contrast.
+- **Brand essence:** A student engineer showing her path into useful GenAI systems; **curious, grounded, direct**.
+- **Brand voice:** Specific, first-person and human. Keep “Building my way into GenAI.” and the supplied personal questions and project descriptions.
+- **Wordmark & logo:** No new logo. The navbar keeps “Esraa”; the hero carries the full name “ESRAA EBEID.”
 - **Signature brand color:** #213843, the deep blue-green canvas.
 
 ## Implementation approach
 
-Use the existing static Vite + React + TypeScript site, suitable for Vercel or static hosting and not dependent on a server or database. Keep editable profile, project, image, tool, repository, and contact data in `src/data/portfolio.ts`; render repeated cards and links from that source. Make project images optional by adding `imageSrc` and `imageAlt` only when an image exists. Use one responsive stylesheet for the requested dark colors, square portrait crop, horizontal project scrolling, keyboard access, and mobile breakpoints. Remove visible logo and favicon treatments. Preserve the supplied photo at `public/images/esraa-portrait.webp`; document how the user can replace it. Do not fabricate project details, tools, results, contact links, or credentials.
+Continue the existing static Vite + React + TypeScript site. Put profile, About copy, focus topics, interest-card copy, project case studies, project links and contact destinations in `src/data/portfolio.ts`. Keep `src/App.tsx` responsible for semantic page order and navigation; repeated project/contact cards continue using their existing components. Load DM Sans and Lora through Google Fonts, apply them across all page text, and preserve the existing responsive hero/photo and horizontal project rail. Update the document title, description and single-route manifest to the full name. No server, database, or other new dependency is required.
 
 ## Project structure
 
-- `src/data/portfolio.ts` — editable profile, project descriptions/image paths/repository states, focus topics, and contact destinations.
-- `src/components/` — reusable project case-study and contact-link UI.
-- `src/App.tsx` — single-page composition, section headings, navigation, and keyboard-enabled project rail.
-- `src/styles.css` — dark palette tokens, square image frame, horizontal card rail, accessibility states, and responsive breakpoints.
-- `public/images/` — replaceable profile photo; optional project images go in `public/images/projects/`.
-- `public/manus-routes.json` — route manifest for the single `/` page.
-- Root Vite/TypeScript/package configuration — development and static production builds.
-- `README.md` — exact file paths and step-by-step text/image editing instructions.
+- `src/data/portfolio.ts` — full/short name, hero/about text, four project stories and tools, focus terms, personal-interest cards, repositories and contacts.
+- `src/components/` — existing reusable project case-study and contact-link components.
+- `src/App.tsx` — navbar, name-first hero, work, about, interests, contact and footer.
+- `src/styles.css` — two-font system, existing dark palette, responsive layout and accessibility details.
+- `index.html` — page metadata and Google Fonts preconnect/stylesheet links.
+- `public/manus-routes.json` — title for the single `/` page.
+- `public/images/` — existing user-supplied square photo and optional project images.
+- `README.md` — exact editing paths for text, fonts and images.
 
-## Content rules
+## Approved copy and content boundaries
 
-MedSeek and Egypt Law RAG use only the facts supplied: the former is an infant-health assistant using RAG; the latter is an Arabic legal assistant. Since implementation details and tools were not supplied, those fields stay explicit placeholders. Budgetly and AG News Intelligence Pipeline keep their titles and editable placeholders. Use the supplied repository links, preserve unknown GitHub and personal contact URLs as placeholders, and do not add a location.
-
-## Portrait and project images
-
-The user-supplied portrait stays in the hero, displayed in a 1:1 square frame. Keep the existing image at `public/images/esraa-portrait.webp`; the README explains how to replace it or change `photoSrc`. Project cards show optional images only when a user adds a file under `public/images/projects/` and its path/alt text to the matching object in `src/data/portfolio.ts`.
+Use the supplied attachment wording for the name-first hero, About story, interests, contact copy, and all four project case studies and tool lists. MedSeek explicitly must not list any particular medical source. Keep current GitHub destinations unchanged, and do not fabricate contact URLs or missing project repository URLs.
 
 ## Hosting status
 
-The repository is private. GitHub's current Pages settings say to upgrade or make the repository public; do not change visibility without a separate decision. Vercel's project config remains available for a personal, non-commercial deployment using `pnpm run build` and `dist/`.
+Keep the current private GitHub source and static/Vercel-ready project. This update is a content/design checkpoint only; it does not enable GitHub Pages or publish the website.

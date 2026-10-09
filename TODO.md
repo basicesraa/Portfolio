@@ -59,3 +59,12 @@ The configured tools do not expose native project todo-item creation, so this fi
 - [x] Set the page-root (`#root`) background color to `#213843`.
 - [x] Set the hero section (`#top`) background color to `#468D8B`.
 - [x] Set the `#hero-title > em` text color to `#FEAF76`.
+
+## 10. User-approved font and whole-page structure
+
+- [x] Use DM Sans and Lora across the entire portfolio; DM Sans for body/interface/labels and Lora for editorial headings and emphasized phrases.
+- [x] Keep “Esraa” in the navbar; make “ESRAA EBEID” the first, prominent hero heading, followed by “AI ENGINEERING STUDENT”, “Building my way into GenAI.”, and the supplied short story. Keep the existing photo beside the hero copy and do not put the main identity under the photo.
+- [x] In “CURRENTLY EXPLORING”, show Generative AI, RAG systems, Agentic AI, and AI applications.
+- [x] Change the selected-work heading to “Things I’ve built.”; use the attached Problem, What I built, How it works, and Main tools copy for MedSeek, Egypt Law RAG, Budgetly, and AG News Intelligence Pipeline. For MedSeek, do not add specific medical sources. Preserve supplied repository URLs and do not invent repository destinations.
+- [x] Change About to the supplied AI Engineering/Tanta University story and 2027 graduation sentence. Remove the repeated current-direction chips and instead show “What I’m interested in” with “Building with AI”, “Grounding AI”, and “Making AI useful”, each with the supplied explanatory sentence.
+- [x] Change the contact heading to “Have an idea worth building?”, use the supplied invitation for AI projects, collaborations, freelance work and learning, and order the links LinkedIn, GitHub, WhatsApp. Keep missing contact destinations as placeholders.
