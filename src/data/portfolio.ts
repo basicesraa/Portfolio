@@ -105,8 +105,8 @@ export const portfolio = {
     },
   ] satisfies Project[],
   contact: {
-    linkedinUrl: null as string | null,
-    whatsappNumber: "", // Country code + number digits only; no leading + or spaces.
-    githubProfileUrl: null as string | null,
+    linkedinUrl: null as string | null, // The supplied LinkedIn entry was a GitHub URL; add the actual LinkedIn URL here.
+    whatsappNumber: "201069804106", // wa.me country-code + number digits only; omit +, spaces, and the domestic trunk zero.
+    githubProfileUrl: "https://github.com/basicesraa",
   },
 };

@@ -7,7 +7,7 @@ The configured tools do not expose native project todo-item creation, so this fi
 - [x] The site should cover who I am, in a few lines, not a long bio; my skills and background, kept short and honest.
 - [x] Sound like a real young engineer: curious, direct, a bit personal. Keep text short. Avoid phrases like “passionate AI enthusiast,” “leveraging cutting-edge technologies,” or “transforming the future.”
 - [x] Design clean, modern, with personality that makes it memorable. It should not look like a SaaS landing page or a generic template. Avoid heavy gradients, 3D, big animated backgrounds, glassmorphism, and animations that exist just to look fancy. Use one strong main background with restrained accents instead of a different color per section.
-- [x] Use the supplied colors: #A0D2EB, #E5EAF5, #D0BDF4, #8458B3, #494D5F.
+- [x] Use the supplied colors: #A0D2EB, #E5EAF5, #D0BDF4, #8458B3, #494D5F. The latest palette request is applied in section 11 below.
 - [x] Must work well on mobile.
 
 ## 2. Projects and repository destinations
@@ -21,10 +21,10 @@ The configured tools do not expose native project todo-item creation, so this fi
 
 ## 3. Contact links
 
-- [ ] Include clickable LinkedIn, WhatsApp, and GitHub profile links that open in a new tab; make them real buttons or obvious links with recognizable icons and ensure they work on mobile. The interface and icons are ready, but these destinations cannot be activated until the URLs and WhatsApp number are supplied.
-- [x] LinkedIn URL is not yet supplied; show a clear editable placeholder rather than inventing one.
-- [x] WhatsApp number is not yet supplied; keep the editable destination compatible with `https://wa.me/[MY NUMBER with country code, digits only, no + or spaces]`, so the WhatsApp link opens the app on a phone when the number is added.
-- [x] GitHub profile URL is not yet supplied; show a clear editable placeholder rather than inventing one.
+- [ ] Include clickable LinkedIn, WhatsApp, and GitHub profile links that open in a new tab; make them real buttons or obvious links with recognizable icons and ensure they work on mobile. GitHub and WhatsApp are active; the actual LinkedIn profile URL is still needed.
+- [ ] LinkedIn URL is not yet supplied. The address supplied under “LinkedIn” was `https://github.com/basicesraa`, so do not assign that GitHub destination to the LinkedIn control; leave a clear editable placeholder until the actual LinkedIn URL is provided.
+- [x] Use the supplied WhatsApp number `+20 01069804106` as a direct mobile-compatible `https://wa.me/[country-code-and-number-digits-only-without-plus-or-spaces]` link. The active URL is `https://wa.me/201069804106`.
+- [x] Use the supplied GitHub profile URL `https://github.com/basicesraa`; it opens in a new tab.
 
 ## 4. Maintainable, Vercel-deployable implementation
 
@@ -54,11 +54,9 @@ The configured tools do not expose native project todo-item creation, so this fi
 - [x] “add more of #A0D2EB”
 - [x] The displayed photo itself must render at a 1:1 width-to-height ratio, separate from its caption.
 
-## 9. Latest preview color edits (request wpe_4eb0cd1b9ead44ab17fb86e7)
+## 9. Previous preview color edits
 
-- [x] Set the page-root (`#root`) background color to `#213843`.
-- [x] Set the hero section (`#top`) background color to `#468D8B`.
-- [x] Set the `#hero-title > em` text color to `#FEAF76`.
+- [x] Earlier preview changes were applied; the current accents are superseded by the latest palette in section 11.
 
 ## 10. User-approved font and whole-page structure
 
@@ -68,3 +66,10 @@ The configured tools do not expose native project todo-item creation, so this fi
 - [x] Change the selected-work heading to “Things I’ve built.”; use the attached Problem, What I built, How it works, and Main tools copy for MedSeek, Egypt Law RAG, Budgetly, and AG News Intelligence Pipeline. For MedSeek, do not add specific medical sources. Preserve supplied repository URLs and do not invent repository destinations.
 - [x] Change About to the supplied AI Engineering/Tanta University story and 2027 graduation sentence. Remove the repeated current-direction chips and instead show “What I’m interested in” with “Building with AI”, “Grounding AI”, and “Making AI useful”, each with the supplied explanatory sentence.
 - [x] Change the contact heading to “Have an idea worth building?”, use the supplied invitation for AI projects, collaborations, freelance work and learning, and order the links LinkedIn, GitHub, WhatsApp. Keep missing contact destinations as placeholders.
+
+## 11. Latest colors and contact destinations
+
+- [x] Use Grassy Green `#9BC400`, Purple Mountains Majesty `#8076A3`, Misty Mountain Pink `#F9C5BD`, and Factory Stone Purple `#7C677F` with contrast-conscious roles on the dark page background.
+- [x] Add the supplied GitHub profile `https://github.com/basicesraa`.
+- [x] Make the supplied WhatsApp number `+20 01069804106` open directly through `https://wa.me/` using country-code and phone digits only, with no plus or spaces.
+- [x] Do not use the supplied `github.com` address as a LinkedIn destination; keep the LinkedIn URL placeholder until a LinkedIn URL is supplied.

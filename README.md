@@ -6,19 +6,23 @@ A responsive Vite + React portfolio. Main copy and project details live in `src/
 
 Open **`src/data/portfolio.ts`**.
 
-- Full hero name: `portfolio.profile.name`; the navbar uses the shorter `portfolio.profile.shortName`.
+- Full hero name: `portfolio.profile.name`; the navbar uses `portfolio.profile.shortName`.
 - Hero story: `portfolio.profile.introduction`.
 - About section: `portfolio.profile.about.intro`, `.question`, and `.direction`; graduation year is `portfolio.profile.graduation`.
 - “Currently exploring” topics: the `portfolio.focus` array.
 - “What I’m interested in” cards: the `portfolio.interests` array; each card has `title` and `description`.
 - Project case studies: edit the matching object in `portfolio.projects`. The fields are `title`, `category`, `problem`, `built`, `howItWorks`, `tools`, and `repoUrl`.
-- Contact destinations: `portfolio.contact.linkedinUrl`, `whatsappNumber`, and `githubProfileUrl`. For WhatsApp, enter country code and number digits only, without `+` or spaces.
+- Contact destinations: `portfolio.contact.linkedinUrl`, `whatsappNumber`, and `githubProfileUrl`. For WhatsApp, enter the country code and phone number as digits only, without `+`, spaces, or the domestic leading zero.
+
+The GitHub profile field is set to `https://github.com/basicesraa`. The number is configured for a direct `https://wa.me/` link. The URL submitted under “LinkedIn” was also a `github.com` URL, so it was not assigned to LinkedIn; add the actual LinkedIn profile URL to `linkedinUrl` when ready.
 
 To change visible page headings or section order, edit **`src/App.tsx`**. Project-card field labels are in **`src/components/ProjectCard.tsx`**. Keep missing repository/contact URLs as placeholders rather than making up destinations.
 
-## Fonts
+## Colors and fonts
 
-The two site fonts are **DM Sans** and **Lora**. Their Google Fonts stylesheet is linked from the `<head>` of **`index.html`**. The root DM Sans and Lora font-family tokens are near the top of **`src/styles.css`**. DM Sans is used for body, navigation and labels; Lora is used for display headings and case-study titles.
+The deep page background is `#213843`. The latest accents are Grassy Green `#9BC400`, Purple Mountains Majesty `#8076A3`, Misty Mountain Pink `#F9C5BD`, and Factory Stone Purple `#7C677F`. Their CSS variables are near the top of **`src/styles.css`**; green/pink are used for high-contrast details, while the purple shades are used for rules and subtle surfaces.
+
+The two site fonts are **DM Sans** and **Lora**. Their Google Fonts stylesheet is linked from the `<head>` of **`index.html`**. DM Sans is used for body, navigation and labels; Lora is used for display headings and case-study titles.
 
 ## Replace the profile photo
 
